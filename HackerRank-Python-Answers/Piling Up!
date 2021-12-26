@@ -1,0 +1,26 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+N = int(input())
+temp = []
+for i in range(N):
+    n = int(input())
+    user_list = list(map(int, input().split()))
+    for i in range(n-1):
+        if user_list[0] >= user_list[len(user_list)-1]:
+            a = user_list[0]
+            user_list.pop(0)
+        elif user_list[0] < user_list[len(user_list)-1]:
+            a = user_list[len(user_list)-1]
+            user_list.pop(len(user_list)-1)
+        else:
+            pass
+        if len(user_list) == 1:
+            temp.append("Yes")
+        if((user_list[0] > a) or (user_list[len(user_list)-1] > a)):
+            temp.append("No")
+            break
+
+
+for i in temp:
+     print(i,end="")
+     print()
