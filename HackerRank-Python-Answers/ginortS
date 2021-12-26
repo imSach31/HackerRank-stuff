@@ -1,0 +1,22 @@
+S = input()
+
+lower = []
+upper = []
+odd = []
+even = []
+for i in S:
+    if i.islower():
+        lower.append(i)
+    elif i.isupper():
+        upper.append(i)
+    elif int(i)%2!=0:
+        odd.append(int(i))
+    else:
+        even.append(int(i))    
+lower.sort()
+upper.sort()
+odd.sort()
+even.sort()
+result = lower+upper+odd+even
+for i in result:
+    print(i,end="")
