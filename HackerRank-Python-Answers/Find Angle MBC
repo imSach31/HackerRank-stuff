@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math as m
+AB = int(input())
+BC = int(input())
+Hypo = m.sqrt(AB**2 + BC**2)
+Hypo = Hypo/2.0
+adj = BC/2.0
+
+output = int(round(m.degrees(m.acos(adj/Hypo))))
+print(str(output)+u'\N{DEGREE SIGN}')
