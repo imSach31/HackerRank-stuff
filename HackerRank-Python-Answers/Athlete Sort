@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+N,M = map(int,input().split())
+l1 = []
+for i in range(N):
+    temp = list(map(int,input().split()))
+    l1.append(temp)
+
+Z = int(input())
+
+l1.sort(key=lambda x: int(x[Z]))
+for i in l1:
+    for j in i:
+        print(j,end=" ")
+    print()    
+
