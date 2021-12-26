@@ -1,0 +1,12 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    for i in range(0,len(string),k):
+        result = string[i:i+k]
+        str1 = ""
+        for i in result:
+            if i not in str1:
+                str1+=i
+        print(str1)        
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
