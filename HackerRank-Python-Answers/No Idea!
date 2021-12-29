@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n,m = input().split()
+n = int(n)
+m = int(m)
+ctr = 0
+n = list(map(int,input().split()))
+A = set(map(int,input().split()))
+B = set(map(int,input().split()))
+
+for i in n:
+    if i in A:
+        ctr+=1
+    if i in B:
+        ctr-=1
+        
+        
+print(ctr)
+
+# Note : I've used sets for A and B, as sets are faster than list and compiler was giving me time limit error.
